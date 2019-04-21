@@ -1,0 +1,59 @@
+/* las siguientes instrucciones se requieren para fijar el pie de página en la parte inferior */
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+.grecaptcha-badge {
+    visibility: hidden;
+}
+
+
+/* .modal { */
+
+
+/*
+      Inicialmente se probarón los formularios con este estilo:
+        max-height: 100% !important;
+        overflow-y: hidden !important;
+      pero no funcionó muy bien que digamos...
+      Se intenta el siguiente cambio para ver resultados
+    
+    height: auto !important;
+    max-height: calc(100vh - 100px) !important;
+    */
+
+
+/* } */
+
+
+/* #sessExpirDiv {
+    border: none;
+    background-color: #FF6666;
+    color: #FFF;
+    font-family: 'Lato', Arial;
+    margin: 0px;
+    font-size: 18px;
+    line-height: 18px;
+    position: fixed;
+    width: 100%;
+    height: 54px;
+    text-align: center;
+    z-index: -999999;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    -webkit-transition: all 1s ease;
+    transition: all 1s ease;
+}
+
+#sessExpirP {
+    margin-top: 16px;
+    padding: 0px;
+} */

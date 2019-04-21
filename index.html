@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+    <title>Tiendas de barrio</title>
+    <script async src="https://www.google.com/recaptcha/api.js?hl=es&render=6LeFJZ4UAAAAAMnD03Gn-dTgljhxuifG0GBFx7v4"></script>
+
+    <link rel="stylesheet" href="./vista/libs/iconfont/material-icons.css" />
+
+    <link rel="stylesheet" href="./vista/libs/materialize/css/materialize.min.css" media="screen,projection" />
+    <script src="./vista/libs/materialize/js/materialize.min.js"></script>
+    <script src="./vista/libs/moment-with-locales.min.js"></script>
+    <link rel="stylesheet" href="./vista/css/main.css" />
+
+    <link href="./vista/libs/tabulator/css/tabulator.min.css" rel="stylesheet">
+    <script type="text/javascript" src="./vista/libs/tabulator/js/tabulator.min.js"></script>
+
+    <script async type="text/javascript" src="./vista/libs/moment-with-locales.min.js"></script>
+
+    <script src="./vista/js/carga-scripts.js"></script>
+    <script type="module" src="./vista/js/main.js"></script>
+    <script type="text/javascript" src="./vista/libs/idle-timeout.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav>
+            <div class="nav-wrapper blue lighten-1">
+                <div class="brand-logo center">
+                    &nbsp;&nbsp;Tiendas de Barrio
+                </div>
+            </div>
+        </nav>
+
+        <div id="index-menu"></div>
+    </header>
+    <div id="sessExpirDiv" class="row center">
+    </div>
+    <main id="index-contenedor" class="container">
+
+        <!-- aquí se van insertando las páginas de la aplicación -->
+    </main>
+
+    <footer class="page-footer blue lighten-1">
+
+        <div class="footer-copyright">
+
+
+            <script type="text/javascript">
+                controlInactividad(idleMinutes = 0.5, warningMinutes = 0.3, logoutUrl = './index.html');
+            </script>
+
+            <div class="container">
+                © 2019 Leonardo Cardona C.&nbsp;&nbsp;&nbsp;&nbsp;
+                <small class="white-text">Este sitio está protegido por reCAPTCHA y Google 
+                    <a class="yellow-text" href="https://policies.google.com/privacy">Política de privacidad</a> y
+                    <a class="yellow-text" href="https://policies.google.com/terms">Términos de servicio</a>.
+                </small>
+                <a class="grey-text text-lighten-4 right" href="www.ucaldas.edu.co">Universidad de Caldas</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>

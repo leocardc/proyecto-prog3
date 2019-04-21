@@ -1,0 +1,75 @@
+[14-Apr-2019 13:34:14 America/Bogota] PHP Warning:  file_get_contents(../servicios/varios/conexion.json): failed to open stream: No such file or directory in F:\xamp\htdocs\salestore-master\controlador\fachada.php on line 100
+[14-Apr-2019 13:34:15 America/Bogota] PDOException: SQLSTATE[08006] [7] could not translate host name "port=" to address: Unknown host in F:\xamp\htdocs\salestore-master\servicios\util\Conexion.php:18
+Stack trace:
+#0 F:\xamp\htdocs\salestore-master\servicios\util\Conexion.php(18): PDO->__construct('pgsql:host= por...', NULL, NULL)
+#1 F:\xamp\htdocs\salestore-master\controlador\fachada.php(46): Conexion->__construct()
+#2 F:\xamp\htdocs\salestore-master\controlador\fachada.php(28): Controlador->ejecutar(Array)
+#3 F:\xamp\htdocs\salestore-master\controlador\fachada.php(3): Controlador->__construct()
+#4 {main}
+[14-Apr-2019 13:35:17 America/Bogota] PDOException: SQLSTATE[08006] [7] FATAL:  la autentificación password falló para el usuario «postgres» in F:\xamp\htdocs\salestore-master\servicios\util\Conexion.php:18
+Stack trace:
+#0 F:\xamp\htdocs\salestore-master\servicios\util\Conexion.php(18): PDO->__construct('pgsql:host=loca...', 'postgres', 'XXXXXXXX')
+#1 F:\xamp\htdocs\salestore-master\controlador\fachada.php(46): Conexion->__construct()
+#2 F:\xamp\htdocs\salestore-master\controlador\fachada.php(28): Controlador->ejecutar(Array)
+#3 F:\xamp\htdocs\salestore-master\controlador\fachada.php(3): Controlador->__construct()
+#4 {main}
+[15-Apr-2019 16:42:03 America/Bogota] Array
+(
+    [clase] => Venta
+    [accion] => seleccionar
+    [cliente] => 
+    [conexion] => Conexion Object
+        (
+            [pdo] => PDO Object
+                (
+                )
+
+        )
+
+)
+
+[20-Apr-2019 01:26:51 America/Bogota] Array
+(
+    [clase] => Venta
+    [accion] => seleccionar
+    [cliente] => 
+    [conexion] => Conexion Object
+        (
+            [pdo] => PDO Object
+                (
+                )
+
+        )
+
+)
+
+[20-Apr-2019 01:32:41 America/Bogota] Array
+(
+    [clase] => Venta
+    [accion] => seleccionar
+    [cliente] => 
+    [conexion] => Conexion Object
+        (
+            [pdo] => PDO Object
+                (
+                )
+
+        )
+
+)
+
+[20-Apr-2019 01:32:45 America/Bogota] Array
+(
+    [clase] => Compra
+    [accion] => seleccionar
+    [proveedor] => 
+    [conexion] => Conexion Object
+        (
+            [pdo] => PDO Object
+                (
+                )
+
+        )
+
+)
+

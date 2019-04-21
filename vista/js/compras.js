@@ -218,6 +218,13 @@ new class Compra {
         let producto = util.buscarProducto(filaActual.producto, productos);
 
         if (producto) {
+
+            if ((filaActual.cantidad + producto.cantidad_disponible) > producto.cantidad_maxima) {
+                M.toast({ html: 'La cantidad supera los limites de capacidad, digite una cantidad menor', classes: 'red darken-4' });
+                celda.getRow().delete();
+                return;
+            }
+
             filaActual.valor = producto.precio;
             filaActual.iva_porcentaje = producto.porcentaje_iva;
             filaActual.iva_valor = producto.porcentaje_iva * producto.porcentaje_iva * filaActual.cantidad_recibida;

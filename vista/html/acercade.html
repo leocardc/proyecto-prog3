@@ -6,9 +6,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Acerca de</title>
+    <style>
+        #sessExpirDiv {
+            border: none;
+            background-color: #FF6666;
+            color: #FFF;
+            font-family: 'Lato', Arial;
+            margin: 0px;
+            font-size: 18px;
+            line-height: 18px;
+            position: fixed;
+            width: 100%;
+            height: 54px;
+            text-align: center;
+            z-index: -999999;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            -webkit-transition: all 1s ease;
+            transition: all 1s ease;
+        }
+        
+        #sessExpirP {
+            margin-top: 16px;
+            padding: 0px;
+        }
+    </style>
 </head>
 
 <body>
+
+    <div id="sessExpirDiv">
+    </div>
 
     <div class="container">
         <div class="row">
@@ -21,7 +50,7 @@
                         <p>Se usa <a href="http://tabulator.info/" target="_blank" rel="noopener noreferrer">Tabulator</a> para mostrar los contenidos.</p>
                     </div>
                     <div class="card-action">
-                        <a href="https://github.com/leocardc" target="_blank" rel="noopener noreferrer">Sobre el autor</a>
+                        <a href="https://github.com/cacuestai" target="_blank" rel="noopener noreferrer">Sobre el autor</a>
                         <a href="http://exploringjs.com/es6/" target="_blank" rel="noopener noreferrer">Sobre ES6</a>
                     </div>
                 </div>
@@ -29,6 +58,13 @@
         </div>
 
     </div>
+
+    <script type="text/javascript" src="http://localhost/Proyecto/vista/js/sessionExpiration.js"></script>
+
+    <script type="text/javascript">
+        sessionExpiration(idleMinutes = 0.6, warningMinutes = 0.05, logoutUrl = 'http://localhost/Proyecto/');
+    </script>
+
 </body>
 
 </html>

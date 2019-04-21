@@ -230,7 +230,7 @@ export let validarCaptcha = claveSitioWeb => {
                     }).then(data => {
                         if (data.respuesta.success) {
                             console.log('captcha correcto');
-                            document.querySelector('#login_btnautenticar').className = 'col s12 btn waves-effect blue';
+                            document.querySelector('#login_btnautenticar').className = 'col s12 btn waves-effect teal';
                         } else {
                             throw 'Falló la verificación reCaptcha del lado del servidor';
                         }
@@ -243,7 +243,7 @@ export let validarCaptcha = claveSitioWeb => {
             }
         });
     } else {
-        document.querySelector('#login_btnautenticar').className = 'col s12 btn btn-large waves-effect blue';
+        document.querySelector('#login_btnautenticar').className = 'col s12 btn btn-large waves-effect teal';
     }
 }
 
@@ -255,19 +255,4 @@ export let validarCaptcha = claveSitioWeb => {
 export let buscarProducto = (descripcionProducto, listaProductos) => {
     const idProducto = descripcionProducto.split('-')[0];
     return listaProductos.lista_completa.find(obj => obj.id_producto == idProducto);
-}
-
-export let cerrarSesion = (url) => {
-    location.href = url;
-    util.fetchData(util.URL_APP, {
-        'body': {
-            clase: 'Conexion',
-            accion: 'cerrarSesion'
-        }
-    }).then(data => {
-        console.log(data);
-    }).catch(error => {
-        mensaje(error, 'No se pudo cerrar');
-    });
-
 }

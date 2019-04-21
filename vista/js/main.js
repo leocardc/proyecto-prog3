@@ -4,20 +4,14 @@ import * as util from './utilidades.js';
 import { Usuario } from './usuario.js';
 import { MaterialDialog } from '../libs/material-dialog.js';
 
-
 window.util = util;
 window.MaterialDialog = MaterialDialog;
 
-
-
 ((doc, win) => {
-
 
     let menuPrincipal;
     let formAutenticacion; // objeto que referencia al formulario de autenticación
     const usuario = new Usuario();
-
-
 
     // cada clave de las propiedades de este objeto, está asociada a un elemento de lista en menu.html y
     // cada valor asociado a una clave corresponde a una página que debe cargarse o a una función que 
@@ -37,7 +31,13 @@ window.MaterialDialog = MaterialDialog;
         'menu-presentaciones': './vista/html/presentaciones-productos.html',
         'menu-productos': './vista/html/productos.html',
         'menu-proveedores': './vista/html/proveedores.html',
-        'menu-ventas': './vista/html/ventas.html'
+        'menu-ventas': './vista/html/ventas.html',
+        'menu-clientes.consulta': './vista/html/clientes.consulta.html',
+        'menu-personal.consulta': './vista/html/personal.consulta.html',
+        'menu-proveedores.consulta': './vista/html/proveedores.consulta.html',
+        'menu-categorias.consulta': './vista/html/categorias-productos.consulta.html',
+        'menu-presentaciones.consulta': './vista/html/presentaciones-productos.consulta.html',
+        'menu-productos.consulta': './vista/html/productos.consulta.html'
     }
 
     doc.addEventListener('DOMContentLoaded', event => {
@@ -74,8 +74,10 @@ window.MaterialDialog = MaterialDialog;
         let paginaMenu = '';
         if (util.usuario.perfil === 'Administrador') {
             paginaMenu = './vista/html/menu-administrador.html';
-        } else {
+        } else if (util.usuario.perfil === 'Vendedor') {
             paginaMenu = './vista/html/menu-vendedor.html';
+        } else {
+            paginaMenu = './vista/html/menu-consulta.html';
         }
 
         $('#index-menu').cargar(paginaMenu, contenedor => {
@@ -105,28 +107,9 @@ window.MaterialDialog = MaterialDialog;
 
             if (typeof formAutenticacion === 'object') {
                 formAutenticacion.close();
-
-                // controlDeInactividad = new ControlDeInactividad({
-                //     titulo: '¡Atención!', // Título del aviso de cierre
-                //     mensaje: 'La aplicación se cerrará', // este mensaje que se muestra
-                //     inactividad: 4, // minutos de inactividad permitida
-                //     conteoRegresivo: 10, // segundos que muestra el aviso de cierre
-                //     monitoreo: {
-                //         intervalo: 300, // cada cuántos segundos se verifica si sesión activa
-                //         clase: 'Conexion',
-                //         accion: 'verificarSesion',
-                //         respuesta: true // el valor de respuesta que se espera
-                //     },
-                //     accion: () => {
-                //         // la acción a realizar cuando se alcance el límite de inactividad
-                //         util.cerrarSesion('index.html');
-                //     }
-                // });
             }
         });
 
     }
-
-
 
 })(document, window);

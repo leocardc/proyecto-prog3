@@ -10,6 +10,12 @@ export class Usuario {
         let idPersona = $('#login-usuario').value;
         let contrasena = $('#login-password').value;
 
+        if (idPersona == "" && contrasena == "") {
+            util.setUsuario("Consultador");
+            hacerAlgo();
+            return;
+        }
+
         util.fetchData(util.URL_APP, {
             'method': 'POST',
             'headers': {
